@@ -2,3 +2,4 @@ pembuatan file1.txt
 Fitur di baru di branch feature/1
 Fitur di baru di branch feature/a
 Fitur di baru di branch feature/b
+Fitur di baru di branch feature/c
