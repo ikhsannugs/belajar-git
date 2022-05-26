@@ -5,21 +5,21 @@ pipeline {
       stage('Test Code With Sonarqube') {
         steps {
           script {
-            sh "echo "INI LAGI TESTING APPS""
+            sh "echo INI LAGI TESTING APPS"
           }
         }
       }
       stage('Build with Docker') {
         steps {
           script {
-            sh "echo "INI LAGI BUILD DOCKER IMAGE""
+            sh "echo INI LAGI BUILD DOCKER IMAGE"
           }
         }
       }
       stage('Publish Docker Image') {
         steps {
           script {
-            sh "echo "INI LAGI PUSH DOCKER IMAGE""
+            sh "echo INI LAGI PUSH DOCKER IMAGE"
           }
         }
       }
@@ -36,7 +36,7 @@ pipeline {
         }
         steps {
           script {
-            sh "echo "DEPLOY APPS""
+            sh "echo DEPLOY APPS"
 //            if ( env.GIT_BRANCH == "feature*" ) {
 //              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
 //            }
