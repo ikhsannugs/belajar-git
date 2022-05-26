@@ -5,7 +5,6 @@ pipeline {
       stage('Test Code With Sonarqube') {
         steps {
             sh "echo "INI LAGI TESTING APPS""
-          }
         }
       }
       stage('Build with Docker') {
@@ -41,7 +40,7 @@ pipeline {
           }
         }
       }
-    }
+   }
     post {
         always {
             echo 'One way or another, I have finished'
