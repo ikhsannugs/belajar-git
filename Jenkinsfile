@@ -27,22 +27,15 @@ pipeline {
         when {
            changelog 'deployment'
         }
-        input {
-          message "Should we continue?"
-            ok "Yes, we should."
-            parameters {
-              string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who are you?')
-            }
-        }
         steps {
           script {
             sh "echo DEPLOY APPS"
-//            if ( env.GIT_BRANCH == "feature*" ) {
-//              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
-//            }
-//            else if ( env.GIT_BRANCH == 'main' ) {
-//              sh "echo "INI LAGI DEPLOY APPS KE SERVER PROD""
-//            }
+            if ( env.GIT_BRANCH == "feature*" ) {
+              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
+            }
+            else if ( env.GIT_BRANCH == 'main' ) {
+              sh "echo "INI LAGI DEPLOY APPS KE SERVER PROD""
+            }
           }
         }
       }
