@@ -4,17 +4,23 @@ pipeline {
     stages{
       stage('Test Code With Sonarqube') {
         steps {
+          script {
             sh "echo "INI LAGI TESTING APPS""
+          }
         }
       }
       stage('Build with Docker') {
         steps {
-          sh "echo "INI LAGI BUILD DOCKER IMAGE""
+          script {
+            sh "echo "INI LAGI BUILD DOCKER IMAGE""
+          }
         }
       }
       stage('Publish Docker Image') {
         steps {
-          sh "echo "INI LAGI PUSH DOCKER IMAGE""
+          script {
+            sh "echo "INI LAGI PUSH DOCKER IMAGE""
+          }
         }
       }
       stage('Deploy to Kubernetes') {
