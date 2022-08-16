@@ -24,13 +24,10 @@ pipeline {
         }
       }
       stage('Deploy to Kubernetes') {
-        when {
-           changelog 'deployment'
-        }
         steps {
           script {
             sh "echo DEPLOY APPS"
-            if ( env.GIT_BRANCH == "feature*" ) {
+            if ( env.GIT_BRANCH == "dev" ) {
               sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
             }
             else if ( env.GIT_BRANCH == 'main' ) {
