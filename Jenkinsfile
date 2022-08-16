@@ -20,7 +20,7 @@ pipeline {
         steps {
           script {
             sh "echo INI LAGI PUSH DOCKER IMAGE"
-            env
+            sh "env"
           }
         }
       }
