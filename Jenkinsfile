@@ -28,10 +28,10 @@ pipeline {
         steps {
           script {
             sh "echo DEPLOY APPS"
-            if ( env.GIT_BRANCH == "dev" ) {
+            if ( env.GIT_BRANCH == "origin/dev" ) {
               sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
             }
-            else if ( env.GIT_BRANCH == 'main' ) {
+            else if ( env.GIT_BRANCH == 'origin/main' ) {
               sh "echo "INI LAGI DEPLOY APPS KE SERVER PROD""
             }
           }
