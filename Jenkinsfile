@@ -29,10 +29,10 @@ pipeline {
           script {
             sh "echo DEPLOY APPS"
             if ( env.GIT_BRANCH == "origin/dev" ) {
-              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
+              echo "INI LAGI DEPLOY APPS KE SERVER DEV"
             }
             else if ( env.GIT_BRANCH == 'origin/main' ) {
-              sh "echo "INI LAGI DEPLOY APPS KE SERVER PROD""
+              echo "INI LAGI DEPLOY APPS KE SERVER PROD"
             }
           }
         }
