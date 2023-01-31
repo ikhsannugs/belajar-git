@@ -28,7 +28,7 @@ pipeline {
           script {
             sh "echo DEPLOY APPS"
             if ( env.GIT_BRANCH == "dev" ) {
-              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV""
+              sh "echo "INI LAGI DEPLOY APPS KE SERVER DEV ICT PRODUCTION""
             }
             else if ( env.GIT_BRANCH == 'main' ) {
               sh "echo "INI LAGI DEPLOY APPS KE SERVER PROD""
